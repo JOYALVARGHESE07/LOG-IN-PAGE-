@@ -157,3 +157,156 @@ a:focus-visible {
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.hero {
+    flex: 1;
+    padding: 50px;
+    color: white;
+    background:
+        linear-gradient(
+            rgba(12, 28, 45, 0.55),
+            rgba(12, 28, 45, 0.65)
+        ),
+        url("images/odin-landscape.jpg") center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.brand h2 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-text {
+    max-width: 480px;
+    margin-bottom: 100px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #f9fafb;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.login-card > p {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin: 20px 0 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    outline: 2px solid #596d48;
+    border-color: transparent;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 28px;
+    border: none;
+    border-radius: 6px;
+    background: #496b50;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #36533c;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup a {
+    color: #496b50;
+    font-weight: bold;
+}
+
+@media (max-width: 750px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .hero-text {
+        margin: 50px 0 0;
+    }
+
+    .login-container {
+        padding: 35px 24px;
+    }
+}
+
+
